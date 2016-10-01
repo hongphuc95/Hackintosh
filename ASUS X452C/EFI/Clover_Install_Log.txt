@@ -1,0 +1,42 @@
+
+Clover EFI installer log - Wed Sep 28 10:49:54 PDT 2016
+Installer version: v2.3k r3763 EFI bootloader
+======================================================
+/dev/disk0
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *500.1 GB   disk0
+   1:                  Apple_HFS OSX                     163.6 GB   disk0s1
+   2:               Windows_NTFS STORAGE 1               168.1 GB   disk0s2
+   3:                      Linux                         166.0 GB   disk0s3
+   4:                 Linux_Swap                         2.1 GB     disk0s5
+/dev/disk1
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *8.0 GB     disk1
+   1:             Windows_FAT_32 LINUX MINT              8.0 GB     disk1s1
+======================================================
+Backing up EFI files
+
+Current Active Partition: 1
+
+Stage 0 - Writting boot0af to /dev/disk0
+//usr/local/bin/fdisk440 -u -f //usr/standalone/i386/boot0af -y /dev/disk0
+
+Stage 1 - Writting boot1h to /dev/rdisk0s1
+File system is HFS.
+dd if=/tmp/boot1h of=/dev/rdisk0s1
+
+Setup Active Partition to be: 1
+New Active Partition: 1
+
+Stage 2 - Written boot6 (x64) to //boot
+======================================================
+Installing RC Scripts
+
+Installing RC scripts on target volume '/'
+
+
+Theme 'metal' (defined in config.plist) not found !
+Using default theme 'bluemac'
+======================================================
+=========== Clover EFI Installation Finish ===========
+======================================================
