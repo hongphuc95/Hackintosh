@@ -1,0 +1,16 @@
+ISI FOLDER EFI
+
+- config.plist
+	- inject ig-platform-id buat enable HD4000
+	- Patch kext biar HDMI port work
+	
+- DSDT
+	- enable wifi ar9285
+	- Disable Radeon 8530
+	- Brightness slider 
+
+- KEXT
+	- voodooHDA 
+	- fakepciid dan fakeusb
+	- 
+
